@@ -1,51 +1,51 @@
 # Challenge
 
-**Prueba para Casa de Desarrollo Full-Stack**
+**Full-Stack Development Home Test**
 
-El propósito de esta prueba es evaluar tus habilidades en desarrollo Backend y Frontend. Debes construir una aplicación web que permita a los usuarios cargar un archivo CSV con datos preformateados y mostrar esos datos como tarjetas en el sitio web, pudiendo filtrar los datos.
+The purpose of this test is to evaluate your skills in Backend and Frontend development. You must build a web application that allows users to upload a pre-formatted CSV file and display that data as cards on the website, with the ability to filter the data.
 
-**Instrucciones**
+**Instructions**
 
-- **Tienes 48 horas para completar la prueba.** NO subas ningún código después de entregarlo en este sistema.
-- **Tu solución DEBE incluir pruebas automatizadas** tanto para el frontend como para el backend. Tener una buena cobertura y probar todas las funciones es parte de la prueba.
-- **NO crees 2 repositorios**, asegúrate de incluir todo el código en el mismo repositorio de GitHub. Crea una carpeta "frontend" y "backend" dentro de tu repositorio y codifica directamente dentro de ellas.
-- El Frontend y el Backend deben funcionar simplemente ejecutando **"npm install" seguido de "npm run dev"** (para ejecutar la aplicación) o **"npm run test"** (para ejecutar todas las pruebas).
-- **NO agregues instrucciones adicionales o comandos de Docker en el readme**, si algo más necesita ser ejecutado antes de iniciar la aplicación, asegúrate de incluirlo en tu script de desarrollo.
-- **Los archivos JavaScript** solo están permitidos en archivos de configuración de lib, todo tu código DEBE estar en **TypeScript** y completamente **tipado**.
+- **You have 48 hours to complete the test. DO NOT upload any code after submitting it in this system.
+- **Your solution MUST include automated tests for both the frontend and backend. Having good coverage and testing all functions is part of the test.
+- DO NOT create 2 repositories, make sure to include all the code in the same GitHub repository. Create a "frontend" and "backend" folder within your repository and code directly inside them.
+- The Frontend and Backend should work simply by running "npm install" followed by "npm run dev" (to run the application) or "npm run test" (to run all tests).
+- DO NOT add additional instructions or Docker commands in the readme, if anything else needs to be executed before starting the application, make sure to include it in your development script.
+- JavaScript files are only allowed in lib configuration files, all your code MUST be in TypeScript and fully typed.
 
-**Cuando termines, despliega tu código en un servicio de hosting** como [Render](https://render.com/) o [Vercel](https://vercel.com/). Se te pedirá que proporciones el enlace de tu repositorio y el (los) enlace(s) de tu aplicación desplegada al final, asegúrate de proporcionar el enlace raíz sin ningún camino.
+**When you finish**, deploy your code to a hosting service like [Render](https://render.com/) o [Vercel](https://vercel.com/). You will be asked to provide the link to your repository and the link(s) to your deployed application(s) at the end, make sure to provide the root link without any path.
 
 ---
 
-**Características del Frontend**
+**Frontend Features**
 
-- Debe ejecutarse en el **puerto 4000**, y todo debe estar en la ruta **"/"** como una **aplicación de una sola página (SPA)** usando **React**.
-- Un botón para **seleccionar un archivo CSV** desde la máquina local y otro botón para **cargar el archivo seleccionado**.
-- Una **barra de búsqueda** que permita a los usuarios buscar datos dentro del archivo CSV cargado.
-- La barra de búsqueda debe **actualizar las tarjetas mostradas** para mostrar solo los resultados coincidentes.
-- Los datos CSV cargados deben mostrarse como **tarjetas en el sitio web**, con cada tarjeta mostrando todos los datos de una sola fila del archivo CSV.
-- Un **diseño responsivo** que funcione bien tanto en dispositivos de escritorio como móviles.
-- **Manejo de errores claro y amigable para el usuario**.
+- It must run on port 4000, and everything must be on the route "/" as a Single Page Application (SPA) using React.
+- A button to select a CSV file from the local machine and another button to upload the selected file.
+- A search bar that allows users to search for data within the uploaded CSV file.
+- The search bar should update the displayed cards to show only matching results.
+- The uploaded CSV data should be displayed as cards on the website, with each card showing all the data from a single row of the CSV file.
+- A responsive layout that works well on both desktop and mobile devices.
+- Clear and user-friendly error handling.
 
-**Características del Backend**
+**Backend Features**
 
-- Debe ejecutarse en el **puerto 3000**.
-- El backend debe implementarse como una **API RESTful** utilizando **Node**. **(NO uses ningún framework con opiniones como Adonis o Nest)**.
-- **El backend debe incluir los siguientes endpoints**:
+- It must run on port 3000.
+- The backend must be implemented as a RESTful API using Node. (DO NOT use any opinionated frameworks like Adonis or Nest).
+- **The backend must include the following endpoints:**:
     - **[POST /api/files]**
-        - Un endpoint que acepta la carga de un archivo CSV desde el frontend y almacena los datos en una base de datos o una estructura de datos. Debes usar la clave "file" en la solicitud del cuerpo.
-        - Esta ruta debe devolver el estado 200 y un objeto con la clave "message" con el valor "El archivo se cargó correctamente".
-        - O esta ruta debe devolver el estado 500 y un objeto con la clave "message" con un mensaje de error en el valor.
+        - An endpoint that accepts the upload of a CSV file from the frontend and stores the data in a database or data structure. You must use the "file" key in the request body.
+        - This route should return status 200 and an object with the key "message" with the value "File uploaded successfully".
+        - Or this route should return status 500 and an object with the key "message" with an error message in the value.
     - **[GET /api/users]**
-        - Debe incluir un endpoint que permita al frontend buscar a través de los datos CSV cargados. Esta ruta debe aceptar un parámetro de consulta ?q= para términos de búsqueda y debe buscar en CADA columna del CSV. El filtro debe buscar coincidencias parciales y también ser insensible a mayúsculas y minúsculas.
-        - Esta ruta debe devolver el estado 200 y un objeto con la clave "data" con un array de objetos dentro de él.
-        - O esta ruta debe devolver el estado 500 y un objeto con la clave "message" con un mensaje de error en el valor.
+        - Should include an endpoint that allows the frontend to search through the uploaded CSV data. This route should accept a query parameter ?q= for search terms and should search in EVERY column of the CSV. The filter should search for partial matches and also be case-insensitive.
+        - This route should return status 200 and an object with the key "data" with an array of objects inside it.
+        - Or this route should return status 500 and an object with the key "message" with an error message in the value.
 
-**Evaluación**
+**Evaluation**
 
-- Evaluaremos tu solución en función de los siguientes criterios:
-    - Completitud de todas las características y funcionalidades requeridas.
-    - Calidad y organización del código.
-    - Calidad y cobertura de las pruebas automatizadas.
-    - Amigabilidad y capacidad de respuesta del frontend.
-    - Rendimiento y eficiencia del backend.
+- We will evaluate your solution based on the following criteria:
+    - Completeness of all required features and functionalities.
+    - Quality and organization of the code.
+    - Quality and coverage of automated tests.
+    - Friendliness and responsiveness of the frontend.
+    - Performance and efficiency of the backend.
