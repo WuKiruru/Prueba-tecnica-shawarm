@@ -1,0 +1,11 @@
+Id,Name,Age,Department,Email,Credit_Card
+1,Ana,25,Sales,ana@example.com,12345678
+2,Carlos,30,Human Resources,carlos@example.com,23456789
+3,Laura,28,Marketing,laura@example.com,34567890
+4,Juan,35,Finance,juan@example.com,45678901
+5,Maria,32,Product Development,maria@example.com,56789012
+6,Pedro,27,Technical Support,pedro@example.com,67890123
+7,Sofia,29,Sales,sofia@example.com,78901234
+8,Daniel,31,Production,daniel@example.com,89012345
+9,Valeria,26,Research and Development,valeria@example.com,90123456
+10,Miguel,29,Logistics,miguel@example.com,01234567
