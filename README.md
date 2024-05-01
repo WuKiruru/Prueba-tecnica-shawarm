@@ -1,12 +1,12 @@
-**SPA proyect that works as a Tecnical Test**
+**SPA Project that Functions as a Technical Test**
 
-Inside the proyect you can find a file named Challenge.md where you can find the porpouse of the proyect and what to do.
+Within the project, you can find a file named Challenge.md where you can discover the purpose of the project and what to do.
 
-Proyect is configured to only require 2 commands to work (1. pnpm install / 2. pnpm run dev).
+The project is configured to only require 2 commands to work (1. pnpm install / 2. pnpm run dev).
 
 **SUMMARY**
 
-Create a SPA web page with API endpoints, the objective is to upload a CSV file with information, process it, and be able to search registries with information on a input.
+Create a Single Page Application (SPA) with API endpoints. The objective is to upload a CSV file containing information, process it, and be able to search records based on input.
 
 
 **Initial state of the SPA**
